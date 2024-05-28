@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.formulario img {
+    width: 80%;
+    margin: 10%;
+    position: inline;
+    z-index: -1;
+}
+.form-control{
+    background-color: transparent !important;
+    border: 1px solid transparent !important;
+    padding-bottom: -1px !important;
+    padding-top: 8px !important;
+    padding-left: 1px !important;
+    font-size: 18px !important;
+ 
+}
+
+.f1{
+    /* border: rgb(161, 161, 224) solid 0.05px;
+    border-radius: 10%; */
+    padding-bottom: 1px !important;
+    position: absolute;
+    z-index: 1;
+    top: 198px;
+    left: 64px;
+    float: left;
+    width: 500px !important;
+}
+
+.f2{
+      float: right;
+      position: absolute;
+      top: 198px;
+      left: 623px;
+      width: 500px !important ;
+}
+
+.f3{
+    position: absolute;
+    top: 256px;
+    left: 62px;
+    width: 500px !important;
+}
+.f4{
+    position: absolute;
+    top: 256px;
+    left: 623px;
+    width: 500px !important;
+}
+.f5{
+    position: absolute;
+    top: 313px;
+    left: 62px;
+    width: 500px !important;
+}
+.f6{
+    position: absolute;
+    top: 313px;
+    left: 623px;
+    width: 345px !important;
+}
+.f7{
+    position: absolute;
+    top: 313px;
+    width: 165px !important;
+    left: 967px;
+}
+.f8{
+    position: absolute;
+    top: 370px;
+    left: 62px;
+    width: 345px !important;
+}
+.f9{
+    position: absolute;
+    top: 370px;
+    left:406px ;
+    width: 155px !important;
+}
+.f10{
+    position: absolute;
+    top: 370px;
+    left: 623px;
+    width: 345px !important;
+}
+.f11{
+    position: absolute;
+    top: 370px;
+    left: 967px;
+    width: 165px !important;
+}
+/* .f12{
+    position: absolute;
+    top: 427px;
+    left: 62px;
+    width: 265px !important;
+
+}
+
+.f13{
+    position: absolute;
+    top: 427px;
+    left: 327px ;
+    width: 235px !important;
+
+} */
+
+.f14{
+    position: absolute;
+    top: 491px;
+    left: 60px;
+    width: 1068px !important;
+    height: 943px !important;
+    padding-top: 8px !important;
+    padding-bottom: 1px !important;
+    padding-left: 6px !important;
+    background-color: #f9f9f9 !important;
+    
+    
+}
+textarea{
+    
+    resize: none !important;
+    text-align: justify;
+}
+
+.chk1{
+    position: absolute;
+    top: 1452px;
+    left: 333px;
+}
+.chk2{
+    position: absolute;
+    top: 1452px;
+    left: 720px;
+}
+.chk3{
+    position: absolute;
+    top: 1452px;
+    left: 1099px;
+}
+/* input[type='checkbox'] {
+    -webkit-appearance:none;
+    width:30px;
+    height:30px;
+    background:white;
+    border-radius:50%;
+    border:2px solid #555;
+}
+input[type='checkbox']:checked {
+    background: rgb(0, 0, 0);
+} */
+
+input[type='radio'] {
+   
+    width:30px;
+    height:30px;
+    background:white;
+
+}
+
+.botonImprimir{
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    position: absolute;
+    padding: 22px 45px;
+    /* border: outset 1px black; */
+    background: rgb(200, 100, 37);
+    box-shadow: -1px 2px 5px 0px rgba(0,0,0,0.75);
+    position: sticky;
+    bottom: 0;
+    float: left;
+}
+.botonImprimir:hover{
+    background: rgb(204, 185, 38);
+    color: rgb(71, 47, 18);
+    text-decoration: none;
+    position: sticky;
+    
+}
+

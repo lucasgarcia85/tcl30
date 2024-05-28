@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+   <div id="loQueSeImprime"> 
+    <img class="formulario" src="tcl30laboral.png" alt="">
+    
+    <input id="" type="text" class="form-control  f1">
+    <input id="" type="text" class="form-control  f2">
+    <input id="" type="text" class="form-control  f3">
+    <input id="" type="text" class="form-control  f4">
+    <input id="" type="text" class="form-control  f5">
+    <input id="" type="text" class="form-control  f6">
+    <input id="" type="text" class="form-control  f7">
+    <input id="" type="text" class="form-control  f8">
+    <input id="" type="text" class="form-control  f9">
+    <input id="" type="text" class="form-control  f10">
+    <input id="" type="text" class="form-control  f11">
+    <!-- <input id="" type="text" class="form-control  f12">
+    <input id="" type="text" class="form-control  f13"> -->
+    <textarea rows="14" cols="50" class="form-control f14">
+</textarea>
+<input class="chk1" type="radio" id="opcion1" value="option1" aria-label="...">
+<input class="chk2" type="radio" id="opcion2" value="option2" aria-label="...">
+<input class="chk3" type="radio" id="opcion3" value="option3" aria-label="...">
+</div>
+<a href="#" class="botonImprimir" id="boton" onclick="imprimirFormulario()">Imprimir</a>
+
+
+
+
+<script>
+    function clickOpcion1() {
+		if (document.getElementById("opcion1").checked) {
+				document.getElementById("opcion2").checked = false;
+                document.getElementById("opcion3").checked = false;
+		}
+}
+
+function clickOpcion2() {
+		if (document.getElementById("opcion2").checked) {
+				document.getElementById("opcion1").checked = false;
+                document.getElementById("opcion3").checked = false;
+		}
+}
+
+function clickOpcion3() {
+		if (document.getElementById("opcion3").checked) {
+				document.getElementById("opcion1").checked = false;
+                document.getElementById("opcion2").checked = false;
+		}
+}
+
+document.getElementById("opcion1").onchange = clickOpcion1;
+document.getElementById("opcion2").onchange = clickOpcion2;
+document.getElementById("opcion3").onchange = clickOpcion3;
+
+
+
+
+function imprimirFormulario(){
+    var boton = document.getElementById("boton");
+    boton.style.display = 'none';
+    window.print("loQueSeImprime");
+    boton.style.display = 'inline';
+}
+
+</script>
+
+</body>
+</html>
+
+
