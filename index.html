@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
     <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Include stylesheet -->
+    
 </head>
 <body>
    <div id="loQueSeImprime"> 
@@ -24,12 +27,14 @@
     <input id="" type="text" class="form-control  f11">
     <!-- <input id="" type="text" class="form-control  f12">
     <input id="" type="text" class="form-control  f13"> -->
-    <textarea rows="14" cols="50" class="form-control f14">
-</textarea>
-<input class="chk1" type="radio" id="opcion1" value="option1" aria-label="...">
-<input class="chk2" type="radio" id="opcion2" value="option2" aria-label="...">
-<input class="chk3" type="radio" id="opcion3" value="option3" aria-label="...">
+    <textarea rows="14" cols="50" class="form-control f14"></textarea>
+    
+    
+    <input class="chk1" type="radio" id="opcion1" value="option1" aria-label="...">
+    <input class="chk2" type="radio" id="opcion2" value="option2" aria-label="...">
+    <input class="chk3" type="radio" id="opcion3" value="option3" aria-label="...">
 </div>
+<div id="editor">inserte texto</div>
 <a href="#" class="botonImprimir" id="boton" onclick="imprimirFormulario()">Imprimir</a>
 
 
@@ -63,15 +68,45 @@ document.getElementById("opcion3").onchange = clickOpcion3;
 
 
 
-
 function imprimirFormulario(){
     var boton = document.getElementById("boton");
+    
+    var qlsnow = document.querySelector('.ql-snow');
     boton.style.display = 'none';
+    qlsnow.style.display = 'none';
     window.print("loQueSeImprime");
     boton.style.display = 'inline';
+    qlsnow.style.display = 'flex';
 }
 
 </script>
+
+<!-- Include the Quill library -->
+<script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
+
+<!-- Initialize Quill editor -->
+
+<script>
+    const quill = new Quill('#editor', {
+        theme: 'snow'
+    });
+    
+    
+    // const quill = new Quill('#editor', {
+
+    //     theme: 'snow',
+    //     modules: {
+    //       toolbar: {
+    //         container: '#toolbar', // Selector for toolbar container
+    //         handlers: {
+    //           bold: customBoldHandler
+    //         }
+    //       }
+    //     }
+    //   });
+  </script>
+
+
 
 </body>
 </html>
