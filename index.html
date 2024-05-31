@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
     <link href="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.snow.css" rel="stylesheet" />
+    
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <!-- Include stylesheet -->
@@ -34,9 +35,47 @@
     <input class="chk2" type="radio" id="opcion2" value="option2" aria-label="...">
     <input class="chk3" type="radio" id="opcion3" value="option3" aria-label="...">
 </div>
-<div id="editor">inserte texto</div>
+<div id="editor"> </div>
 <a href="#" class="botonImprimir" id="boton" onclick="imprimirFormulario()">Imprimir</a>
 
+
+<div id="toolbar-container">
+    <span class="ql-formats">
+      <!-- <select class="ql-font"></select> -->
+      <select class="ql-size"></select>
+    </span>
+    <span class="ql-formats">
+      <button class="ql-bold"></button>
+      <button class="ql-italic"></button>
+      <button class="ql-underline"></button>
+      <button class="ql-strike"></button>
+    </span>
+    <span class="ql-formats">
+      <select class="ql-color"></select>
+      <select class="ql-background"></select>
+    </span>
+    
+    <span class="ql-formats">
+      <button class="ql-header" value="1"></button>
+      <button class="ql-header" value="2"></button>
+      <button class="ql-header" value="3"></button>
+      <button class="ql-header" value="4"></button>
+      <button class="ql-header" value="5"></button>
+    </span>
+    <span class="ql-formats">
+      <button class="ql-list" value="ordered"></button>
+      <button class="ql-list" value="bullet"></button>
+      <button class="ql-indent" value="-1"></button>
+      <button class="ql-indent" value="+1"></button>
+    </span>
+    <span class="ql-formats">
+      
+      <select class="ql-align"></select>
+    </span>
+    <span class="ql-formats">
+      <button class="ql-clean"></button>
+    </span>
+  </div>
 
 
 
@@ -71,39 +110,31 @@ document.getElementById("opcion3").onchange = clickOpcion3;
 function imprimirFormulario(){
     var boton = document.getElementById("boton");
     
-    var qlsnow = document.querySelector('.ql-snow');
+    var toolbar = document.querySelector('#toolbar-container');
     boton.style.display = 'none';
-    qlsnow.style.display = 'none';
+    toolbar.style.display = 'none';
     window.print("loQueSeImprime");
     boton.style.display = 'inline';
-    qlsnow.style.display = 'flex';
+    toolbar.style.display = 'flex';
 }
 
 </script>
 
 <!-- Include the Quill library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
 
 <!-- Initialize Quill editor -->
 
 <script>
     const quill = new Quill('#editor', {
-        theme: 'snow'
+      modules: {
+        syntax: true,
+        toolbar: '#toolbar-container',
+      },
+      placeholder: 'Escriba aquí o pegue el texto.',
+      theme: 'snow',
     });
-    
-    
-    // const quill = new Quill('#editor', {
-
-    //     theme: 'snow',
-    //     modules: {
-    //       toolbar: {
-    //         container: '#toolbar', // Selector for toolbar container
-    //         handlers: {
-    //           bold: customBoldHandler
-    //         }
-    //       }
-    //     }
-    //   });
   </script>
 
 

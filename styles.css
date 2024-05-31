@@ -1,8 +1,32 @@
 *{
     margin: 0;
     padding: 0;
-    font-size: 16px;
+    font-size: 17px;
+    font-family:sans-serif;
+    line-height:normal;
+    
 }
+
+h1{
+    font-size: 18px; 
+    line-height:2rem;
+}
+h2{
+    font-size: 17px; 
+    line-height:1.7rem;
+}
+h3{
+    font-size: 16px; 
+    line-height:1.6rem;
+}
+h4{
+   font-size: 15px; 
+   line-height:1.5rem;
+}
+h4{
+    font-size: 15px; 
+    line-height:1.4rem;
+ }
 
 .formulario img {
     width: 80%;
@@ -127,6 +151,7 @@ textarea{
     
     resize: none !important;
     text-align: justify;
+   
 }
 
 #editor{
@@ -140,6 +165,7 @@ textarea{
     padding-left: 6px !important;
     background-color: #f9f9f9 !important;
     text-align: justify;
+    
 }
 
  .ql-container.ql-snow{
@@ -196,6 +222,7 @@ input[type='radio'] {
     text-decoration: none;
     color: black;
     transition: all 0.5s ease-out; 
+    
 }
 .botonImprimir:hover{
     text-decoration: none;
@@ -207,7 +234,7 @@ input[type='radio'] {
     
 }
 
-.ql-toolbar.ql-snow{   
+#toolbar-container{   
    border: 1px solid #ccc;
    box-sizing: border-box;
    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
@@ -219,13 +246,27 @@ input[type='radio'] {
    z-index: 2;
    width: fit-content;
    background-color: rgb(236, 229, 229);
-   
-  
+   animation: LeftToRight 1s linear;
+ 
+
 }
 
-/* .ql-header.ql-picker.ql-expanded .ql-picker-options[aria-hidden="false"] {
-    display: block;
-    margin-top: -1px;
-    top: 100%;
-    z-index: 1;
-} */
+@keyframes LeftToRight {
+    0% {
+        
+        transform: translateX(-375px);
+
+    }
+    90%{
+
+        transform: translateX(-25px);
+
+    }
+       
+    100% {
+        transform: translateX(0px);
+    
+  }
+
+}
+
