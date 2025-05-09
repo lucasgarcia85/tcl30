@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <!-- Include stylesheet -->
-    
+  
 </head>
 <body>
    <div id="loQueSeImprime"> 
@@ -34,12 +34,15 @@
     <input class="chk1" type="radio" id="opcion1" value="option1" aria-label="...">
     <input class="chk2" type="radio" id="opcion2" value="option2" aria-label="...">
     <input class="chk3" type="radio" id="opcion3" value="option3" aria-label="...">
-</div>
-<div id="editor"> </div>
+  </div>
+  <div id="editor"> 
+
+  </div>
 <a href="#" class="botonImprimir" id="boton" onclick="imprimirFormulario()">Imprimir</a>
 
 
 <div id="toolbar-container">
+  
     <span class="ql-formats">
       <!-- <select class="ql-font"></select> -->
       <select class="ql-size"></select>
@@ -80,9 +83,39 @@
       <img style="border: 0px solid; display: inline;" alt="contador de visitas" src="https://websmultimedia.com/contador-de-visitas.php?id=17909">
       
     </span>
+    <span class="controls">
+      <p><b>Tamaño de letra encabezado:</b></p>
+      <p onclick="ajustarTamano('aumentar')">+</p>
+      <p onclick="ajustarTamano('disminuir')">-</p>
+    </span>
+    
+    
+    
   </div>
 
+  
+  
+  <script>
 
+    let tamanoActual = 16; // Tamaño inicial en px
+    const elementos = document.querySelectorAll('#loQueSeImprime .form-control');
+    
+    // Función para ajustar el tamaño del texto
+    function ajustarTamano(accion) {
+    
+    // Ajustar el tamaño según la acción
+    if (accion == 'aumentar') {
+        tamanoActual += 2;
+    } else if (accion == 'disminuir') {
+        tamanoActual = Math.max(8, tamanoActual - 2);
+    }
+    
+    // Aplicar el nuevo tamaño a todos los elementos
+    elementos.forEach(elemento => {
+        elemento.style.fontSize = `${tamanoActual}px`;
+    });
+  }
+  </script>
 
 <script>
     function clickOpcion1() {
@@ -129,6 +162,8 @@ function imprimirFormulario(){
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/quill@2.0.2/dist/quill.js"></script>
 
+
+
 <!-- Initialize Quill editor -->
 
 <script>
@@ -140,7 +175,10 @@ function imprimirFormulario(){
       placeholder: 'Escriba aquí o pegue el texto.',
       theme: 'snow',
     });
-  </script>
+
+</script>
+
+
 
 
 
